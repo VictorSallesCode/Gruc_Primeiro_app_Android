@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    tools:context=".NewPasswordActivity">
+
+    <ImageView
+        android:id="@+id/image_logotipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:contentDescription="Logotipo GRUC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logotipo" />
+
+    <TextView
+        android:id="@+id/text_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="GRUC - Facilitando sua vida."
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_logotipo" />
+
+    <EditText
+        android:id="@+id/edit_cpf"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="32dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:hint="CPF"
+        android:inputType="number"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_subtitle" />
+
+    <TextView
+        android:id="@+id/label_cpf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CPF"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/edit_cpf"
+        app:layout_constraintStart_toStartOf="@id/edit_cpf"
+        app:layout_constraintEnd_toEndOf="@id/edit_cpf"/>
+
+    <EditText
+        android:id="@+id/edit_code"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:hint="CÓDIGO RECEBIDO"
+        android:inputType="numberPassword"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@id/edit_cpf"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/edit_cpf"
+        app:layout_constraintTop_toBottomOf="@id/edit_cpf" />
+
+    <TextView
+        android:id="@+id/label_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CÓDIGO RECEBIDO"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/edit_code"
+        app:layout_constraintStart_toStartOf="@id/edit_code"
+        app:layout_constraintEnd_toEndOf="@id/edit_code"/>
+
+    <EditText
+        android:id="@+id/edit_new_password"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="44dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:hint="NOVA SENHA"
+        android:inputType="textPassword"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@id/edit_code"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/edit_code"
+        app:layout_constraintTop_toBottomOf="@id/edit_code" />
+
+    <TextView
+        android:id="@+id/label_new_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="NOVA SENHA"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/edit_new_password"
+        app:layout_constraintStart_toStartOf="@id/edit_new_password"
+        app:layout_constraintEnd_toEndOf="@id/edit_new_password"/>
+
+    <Button
+        android:id="@+id/button_confirm_change"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/blue"
+        android:text="Confirmar alteração"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/edit_new_password"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/edit_new_password"
+        app:layout_constraintTop_toBottomOf="@id/edit_new_password" />
+
+    <TextView
+        android:id="@+id/text_contact_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Qualquer dúvida ou problema entre em contato conosco."
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_confirm_change" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

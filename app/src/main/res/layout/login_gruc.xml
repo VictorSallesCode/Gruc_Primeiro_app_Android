@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/image_logotipo"
+        android:layout_width="150dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="64dp"
+        android:contentDescription="Logotipo GRUC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logotipo" />
+
+    <TextView
+        android:id="@+id/text_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Bem vindo ao - Guarulhos Airport Certificados"
+        android:textColor="@color/blue"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_logotipo" />
+
+    <TextView
+        android:id="@+id/text_label_cpf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="CPF"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/edit_cpf"
+        app:layout_constraintBottom_toTopOf="@id/edit_cpf"
+        app:layout_constraintEnd_toEndOf="@id/edit_cpf"/>
+
+    <EditText
+        android:id="@+id/edit_cpf"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_welcome" />
+
+    <TextView
+        android:id="@+id/text_label_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:text="SENHA"
+        android:textSize="16sp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/edit_password"
+        app:layout_constraintEnd_toEndOf="@id/edit_password"
+        app:layout_constraintStart_toStartOf="@id/edit_password" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/edit_cpf"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/edit_cpf"
+        app:layout_constraintTop_toBottomOf="@id/edit_cpf" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/blue"
+        android:text="Login"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toEndOf="@id/edit_password"
+        app:layout_constraintStart_toStartOf="@id/edit_password"
+        app:layout_constraintTop_toBottomOf="@id/edit_password" />
+
+    <LinearLayout
+        android:id="@+id/forgot_password_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        app:layout_constraintEnd_toEndOf="@id/button_login"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/button_login"
+        app:layout_constraintTop_toBottomOf="@id/button_login">
+
+        <TextView
+            android:id="@+id/text_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:text="Esqueceu a senha? "
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/text_click_here_forgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clique aqui."
+            android:textColor="@color/green"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/register_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintEnd_toEndOf="@id/forgot_password_container"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/forgot_password_container"
+        app:layout_constraintTop_toBottomOf="@id/forgot_password_container">
+
+        <TextView
+            android:id="@+id/text_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:text="Ainda não possui cadastro? "
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/text_click_here_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clique aqui."
+            android:textColor="@color/green"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

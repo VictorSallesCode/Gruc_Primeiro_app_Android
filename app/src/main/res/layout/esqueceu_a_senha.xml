@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    tools:context=".RecoveryActivity">
+
+    <ImageView
+        android:id="@+id/image_logotipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:contentDescription="Logotipo GRUC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logotipo" />
+
+    <TextView
+        android:id="@+id/text_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Digite os dados abaixo:"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_logotipo" />
+
+    <TextView
+        android:id="@+id/label_cpf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="CPF"
+        android:textColor="@color/blue"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edit_cpf"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_cpf"
+        app:layout_constraintTop_toBottomOf="@id/text_instruction" />
+
+    <EditText
+        android:id="@+id/edit_cpf"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:inputType="number"
+        android:textColorHint="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_cpf" />
+
+    <TextView
+        android:id="@+id/label_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="EMAIL"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="@id/edit_cpf"
+        app:layout_constraintStart_toStartOf="@id/edit_cpf"
+        app:layout_constraintTop_toBottomOf="@id/edit_cpf" />
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@id/edit_cpf"
+        app:layout_constraintStart_toStartOf="@id/edit_cpf"
+        app:layout_constraintTop_toBottomOf="@id/label_email" />
+
+    <Button
+        android:id="@+id/button_recover_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/blue"
+        android:text="Recuperar por e-mail!"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toEndOf="@id/edit_email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/edit_email"
+        app:layout_constraintTop_toBottomOf="@id/edit_email" />
+
+    <TextView
+        android:id="@+id/label_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="TELEFONE"
+        android:textColor="@color/blue"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/button_recover_email"
+        app:layout_constraintStart_toStartOf="@id/button_recover_email"
+        app:layout_constraintTop_toBottomOf="@id/button_recover_email" />
+
+    <EditText
+        android:id="@+id/edit_phone"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:inputType="phone"
+        android:textColorHint="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@id/button_recover_email"
+        app:layout_constraintStart_toStartOf="@id/button_recover_email"
+        app:layout_constraintTop_toBottomOf="@id/label_phone" />
+
+    <Button
+        android:id="@+id/button_recover_sms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/blue"
+        android:text="Recuperar por SMS!"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toEndOf="@id/edit_phone"
+        app:layout_constraintStart_toStartOf="@id/edit_phone"
+        app:layout_constraintTop_toBottomOf="@id/edit_phone" />
+
+    <TextView
+        android:id="@+id/text_contact_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Qualquer dúvida entre em contato conosco também."
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_recover_sms" />
+
+    <Button
+        android:id="@+id/button_received_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/green"
+        android:text="JÁ RECEBI O CÓDIGO"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/button_recover_sms"
+        app:layout_constraintStart_toStartOf="@id/button_recover_sms"
+        app:layout_constraintTop_toBottomOf="@id/text_contact_info" />
+
+    <LinearLayout
+        android:id="@+id/layout_links"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="@id/button_received_code"
+        app:layout_constraintStart_toStartOf="@id/button_received_code"
+        app:layout_constraintTop_toBottomOf="@id/button_received_code">
+
+        <TextView
+            android:id="@+id/text_clicked_wrong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:paddingStart="4dp"
+            android:text="Clicou errado?"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/text_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:paddingEnd="4dp"
+            android:text="Voltar."
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    tools:context=".UpdateActivity">
+
+    <ImageView
+        android:id="@+id/image_logotipo_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:contentDescription="Logotipo GRUC"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/logotipo" />
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Atualização Cadastral"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_logotipo_header" />
+
+    <TextView
+        android:id="@+id/text_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Qualquer dúvida entre em contato conosco."
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_form_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_subtitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_divider_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.45" />
+
+            <TextView
+                android:id="@+id/label_cpf"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="CPF:"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edit_cpf_display"
+                style="@style/FieldDisplay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_border_white"
+                android:text="656.555.448-99"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_cpf"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_name"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Nome:"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toBottomOf="@id/label_cpf" />
+
+            <EditText
+                android:id="@+id/edit_name"
+                style="@style/FieldEditable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="João Peres"
+                android:background="@drawable/edittext_border_white"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_phone"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Telefone:"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toBottomOf="@id/label_name" />
+
+            <EditText
+                android:id="@+id/edit_phone"
+                style="@style/FieldEditable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="11 95444-8888"
+                android:background="@drawable/edittext_border_white"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_password"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Senha:"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toBottomOf="@id/label_phone" />
+
+            <EditText
+                android:id="@+id/edit_password"
+                style="@style/FieldDisplay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:text="******"
+                android:background="@drawable/edittext_border_white"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_email"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Seu e-mail:"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toBottomOf="@id/label_password" />
+
+            <EditText
+                android:id="@+id/edit_email"
+                style="@style/FieldDisplay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="joao_peres@h"
+                android:background="@drawable/edittext_border_white"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_data_credencial"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Data da emissão - Credencial:"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toBottomOf="@id/label_email" />
+
+            <EditText
+                android:id="@+id/edit_data_credencial"
+                style="@style/FieldDisplay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:background="@drawable/edittext_border_white"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_data_credencial"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_data_reciclagem"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Data da emissão - Reciclagem Vigilancia:"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toBottomOf="@id/label_data_credencial" />
+
+            <EditText
+                android:id="@+id/edit_data_reciclagem"
+                style="@style/FieldDisplay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:background="@drawable/edittext_border_white"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_data_reciclagem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_data_avsec"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Data da emissão - AVSEC:"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toBottomOf="@id/label_data_reciclagem" />
+
+            <EditText
+                android:id="@+id/edit_data_avsec"
+                style="@style/FieldDisplay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:background="@drawable/edittext_border_white"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_data_avsec"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button_confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/green"
+        android:text="Confirme a alteração"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="@id/card_form_data"
+        app:layout_constraintStart_toStartOf="@id/card_form_data"
+        app:layout_constraintTop_toBottomOf="@id/card_form_data" />
+
+    <LinearLayout
+        android:id="@+id/layout_links"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="@id/card_form_data"
+        app:layout_constraintStart_toStartOf="@id/card_form_data"
+        app:layout_constraintTop_toBottomOf="@id/button_confirm">
+
+        <TextView
+            android:id="@+id/text_clicked_wrong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:paddingStart="4dp"
+            android:text="Clicou errado?"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/text_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:paddingEnd="4dp"
+            android:text="Voltar"
+            android:textColor="@color/green" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

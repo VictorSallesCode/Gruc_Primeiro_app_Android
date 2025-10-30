@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/image_logotipo_header"
+        android:layout_width="117dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Logotipo GRUC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logotipo" />
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Criar uma conta"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_logotipo_header" />
+
+    <TextView
+        android:id="@+id/text_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Cadastre-se para começar"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_form"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_subtitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_divider_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.45" />
+
+            <TextView
+                android:id="@+id/label_cpf"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="CPF:"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edit_cpf"
+                style="@style/FieldEditable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="CPF"
+                android:background="@drawable/edittext_border_white"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_cpf"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_name"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Nome:"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toBottomOf="@id/label_cpf" />
+
+            <EditText
+                android:id="@+id/edit_name"
+                style="@style/FieldEditable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Nome"
+                android:background="@drawable/edittext_border_white"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_phone"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Telefone:"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toBottomOf="@id/label_name" />
+
+            <EditText
+                android:id="@+id/edit_phone"
+                style="@style/FieldEditable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Telefone"
+                android:background="@drawable/edittext_border_white"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_password"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Senha:"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toBottomOf="@id/label_phone" />
+
+            <EditText
+                android:id="@+id/edit_password"
+                style="@style/FieldEditable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Senha"
+                android:inputType="textPassword"
+                android:background="@drawable/edittext_border_white"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_email"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Seu e-mail:"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toBottomOf="@id/label_password" />
+
+            <EditText
+                android:id="@+id/edit_email"
+                style="@style/FieldEditable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="E-mail"
+                android:background="@drawable/edittext_border_white"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_data_credencial"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Data da emissão - Credencial:"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toBottomOf="@id/label_email" />
+
+            <EditText
+                android:id="@+id/edit_data_credencial"
+                style="@style/FieldEditable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Data de Emissão"
+                android:background="@drawable/edittext_border_white"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_data_credencial"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_data_reciclagem"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Data da emissão - Reciclagem Vigilancia:"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toBottomOf="@id/label_data_credencial" />
+
+            <EditText
+                android:id="@+id/edit_data_reciclagem"
+                style="@style/FieldEditable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Data de Emissão"
+                android:background="@drawable/edittext_border_white"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_data_reciclagem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_data_avsec"
+                style="@style/StatusLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Data da emissão - AVSEC:"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline_divider_card"
+                app:layout_constraintTop_toBottomOf="@id/label_data_reciclagem" />
+
+            <EditText
+                android:id="@+id/edit_data_avsec"
+                style="@style/FieldEditable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Data de Emissão"
+                android:background="@drawable/edittext_border_white"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_data_avsec"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/blue"
+        android:text="Cadastre-se"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toEndOf="@id/card_form"
+        app:layout_constraintStart_toStartOf="@id/card_form"
+        app:layout_constraintTop_toBottomOf="@id/card_form" />
+
+    <LinearLayout
+        android:id="@+id/layout_links_bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="@id/card_form"
+        app:layout_constraintStart_toStartOf="@id/card_form"
+        app:layout_constraintTop_toBottomOf="@id/button_register">
+
+        <TextView
+            android:id="@+id/text_has_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:paddingStart="4dp"
+            android:text="Já possui cadastro?"
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:paddingEnd="4dp"
+            android:text="Entrar"
+            android:textColor="@android:color/holo_green_dark"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/logotipo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Logotipo do Aplicativo" />
+
+    <TextView
+        android:id="@+id/text_bem_vindo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Seja bem-vindo!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_colaborador_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_bem_vindo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_divider_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.38" />
+
+            <TextView
+                android:id="@+id/label_nome"
+                style="@style/StatusLabelStyle"
+                android:text="Nome: "
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_nome"
+                style="@style/StatusDataStyle"
+                android:layout_width="0dp"
+                android:background="@null"
+                android:text="Nome do Colaborador"
+                android:textColor="@android:color/black"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_nome"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_cpf"
+                style="@style/StatusLabelStyle"
+                android:layout_marginTop="8dp"
+                android:text="CPF: "
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_nome" />
+
+            <TextView
+                android:id="@+id/text_cpf"
+                style="@style/StatusDataStyle"
+                android:layout_width="0dp"
+                android:background="@null"
+                android:text="123.456.789-00"
+                android:textColor="@android:color/black"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_cpf"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_email"
+                style="@style/StatusLabelStyle"
+                android:layout_marginTop="8dp"
+                android:text="E-mail: "
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_cpf" />
+
+            <TextView
+                android:id="@+id/text_email"
+                style="@style/StatusDataStyle"
+                android:layout_width="0dp"
+                android:background="@null"
+                android:text="colaborador@email.com"
+                android:textColor="@android:color/black"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_celular"
+                style="@style/StatusLabelStyle"
+                android:layout_marginTop="8dp"
+                android:text="Celular: "
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_email" />
+
+            <TextView
+                android:id="@+id/text_celular"
+                style="@style/StatusDataStyle"
+                android:layout_width="0dp"
+                android:background="@null"
+                android:text="(11) 99999-9999"
+                android:textColor="@android:color/black"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_celular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <TextView
+                android:id="@+id/label_credencial"
+                style="@style/StatusLabelStyle"
+                android:layout_marginTop="16dp"
+                android:text="Credencial: "
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_celular" />
+
+            <TextView
+                android:id="@+id/text_credencial"
+                style="@style/StatusDataStyle"
+                android:layout_width="0dp"
+                android:layout_marginEnd="8dp"
+                android:background="@null"
+                android:text="dd/mm/aaaa"
+                android:textColor="@android:color/black"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_credencial"
+                app:layout_constraintEnd_toStartOf="@id/status_credencial"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <ImageView
+                android:id="@+id/status_credencial"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:contentDescription="Status Credencial"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_credencial"
+                app:layout_constraintBottom_toBottomOf="@id/text_credencial"/>
+
+            <TextView
+                android:id="@+id/label_reciclagem"
+                style="@style/StatusLabelStyle"
+                android:layout_marginTop="12dp"
+                android:text="Reciclagem de Vigilante: "
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_credencial" />
+
+            <TextView
+                android:id="@+id/text_reciclagem"
+                style="@style/StatusDataStyle"
+                android:layout_width="0dp"
+                android:layout_marginEnd="8dp"
+                android:background="@null"
+                android:text="dd/mm/aaaa"
+                android:textColor="@android:color/black"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_reciclagem"
+                app:layout_constraintEnd_toStartOf="@id/status_reciclagem"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <ImageView
+                android:id="@+id/status_reciclagem"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:contentDescription="Status Reciclagem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_reciclagem"
+                app:layout_constraintBottom_toBottomOf="@id/text_reciclagem"/>
+
+            <TextView
+                android:id="@+id/label_avsec"
+                style="@style/StatusLabelStyle"
+                android:layout_marginTop="8dp"
+                android:text="AVSEC: "
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_reciclagem" />
+
+            <TextView
+                android:id="@+id/text_avsec"
+                style="@style/StatusDataStyle"
+                android:layout_width="0dp"
+                android:layout_marginEnd="8dp"
+                android:background="@null"
+                android:text="dd/mm/aaaa"
+                android:textColor="@android:color/black"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_avsec"
+                app:layout_constraintEnd_toStartOf="@id/status_avsec"
+                app:layout_constraintStart_toEndOf="@id/guideline_divider_card" />
+
+            <ImageView
+                android:id="@+id/status_avsec"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:contentDescription="Status AVSEC"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_avsec"
+                app:layout_constraintBottom_toBottomOf="@id/text_avsec"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_atualizar_cadastro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/green"
+        android:text="Atualizar Cadastro"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_colaborador_data" />
+
+    <Button
+        android:id="@+id/btn_sair"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/blue"
+        android:text="Sair"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_atualizar_cadastro" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
